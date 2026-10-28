@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #ECEAE3;
+    color: #1A1A17;
+  }
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+}
+
+@layer components {
+  .anno {
+    @apply text-sand-500 text-xs leading-snug;
+  }
+  .anno-label {
+    @apply text-sand-700 font-medium text-xs;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #D6D3C8;
+    border-radius: 8px;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Dotted grid for wireframe canvas */
+.canvas-grid {
+  background-image: radial-gradient(circle, #D6D3C8 1px, transparent 1px);
+  background-size: 24px 24px;
+}
